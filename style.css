@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+} 
+nav{
+  display: flex;
+  height: 80px;
+  width: 100%;
+  background: lightgray;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 500;
+}
+/* nav .logo{
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+} */
+.logo{
+  position: absolute;
+  left:2px;
+}
+nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li{
+  margin: 0 5px;
+}
+nav ul li a{
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+nav ul li a.active,
+nav ul li a:hover{
+  color: #111;
+  background: #fff;
+}
+nav .menu-btn i{
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  right: 25px;
+}
+input[type="checkbox"]{
+  display: none;
+}
+@media (max-width: 1000px){
+  nav{
+    padding: 0 40px 0 50px;
+  }
+}
+@media (max-width: 920px) {
+  nav .menu-btn i{
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+  nav ul{
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: #111;
+    height: 50vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  #click:checked ~ ul{
+    left: 0;
+  }
+  nav ul li{
+    width: 100%;
+    margin: 40px 0;
+  }
+  nav ul li a{
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ ul li a{
+    margin-left: 0px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover{
+    background: none;
+    color: cyan;
+  }
+}
+body{
+  overflow-x:hidden;
+  overflow-y: scroll;
+}
+.main{
+    color: rgba(255, 252, 252, 0.838);
+    font-size: 5.0em;
+    font-family: 'Roboto Slab', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-weight: 700;
+    position: fixed;
+    top: 0;
+    z-index: 200;
+    background: url(./assets/NitFrontGate.ac06eab6.webp);
+    background-size:cover;
+    height: 71vh !important;
+    width:99vw;
+}
+.mission{
+    background-image: linear-gradient(rgba(128, 128, 128, 0.603),1%,rgb(255, 255, 255));
+    background-size: contain;
+    background-repeat: no-repeat;
+    height:63vh;
+    position: relative;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10vh;
+}
+.con{
+    display: flex;
+    width:70vw;
+}
+.heading{
+    font-size: 4em;
+    font-family: 'Roboto Slab';
+    font-weight: 700;
+    width:40vw;
+    display: flex;
+    align-items: center;
+    border-right: 8px solid blue;
+    height: 50vh;
+    width:40vh;
+    padding-right: 5vw;
+}
+.content{
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    width:40vw;
+    display:flex;
+    height:50vh;
+    padding-left: 8vw;
+    align-items: center;
+    text-align: center;
+}
+.bar{
+    width:70vw;
+    height:1vh;
+    background-color: rgb(83, 83, 83);
+}
+.gallery{
+    background-image: linear-gradient(rgba(128, 128, 128, 0.603),0%,rgb(255, 255, 255));
+    position: relative;
+    z-index: 1000;
+    width: 100vw;
+    height:fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.heading2{
+    font-size: 4em;
+    font-family: 'Roboto Slab';
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    width:70%;
+    padding-right: 5vw;
+    padding-top: 10vh;
+    padding-left: 5vw;
+    /* border-bottom: 5px solid turquoise; */
+}
+.cardContent{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 5vw;
+    height:fit-content
+}
+.holder{
+    background-color: rgb(241, 241, 241);
+    border-radius: 15px;
+    height: 32vh;
+    width:10vw;
+    min-width: 250px;
+    margin: 4vmin;
+    transition: all 0.4s;
+}
+.holder:hover{
+    box-shadow: 16px 13px 16px 3px rgb(170, 170, 170);
+}
+.holder img{
+    height:25vh;
+    width: 10vw;
+    border-radius: 15px 15px 0px 0px;
+    min-width: 250px;
+}
+.heading3{
+    width:90%;
+    text-align: center;
+    padding-top: 1vh;
+    font-family: 'Roboto Slab';
+}
+#foot{
+    background-color:lightgray;
+    text-align: center;
+    position: relative;
+    margin-top: 12vh;
+    margin-bottom: 0px;
+    height: 8vh;
+    display: flex;
+    flex-flow: column;
+}
+#foot p{
+    margin-bottom: 0px;
+    justify-content: space-between;
+    background-color: lightgray;
+    padding-top: 2vh;
+}
+.foot-item{
+    padding-top: 2vh;
+}
+.foot-link{
+    margin: 3% 2%;
+}
+.square-1{
+    position: relative;
+    top:-33vh;
+    right:26vw;
+    rotate: -15deg;
+    fill:rgba(225, 52, 30, 0.12);
+    scale: 4;
+}
+.square-2{
+    position: relative;
+    top:-10vh;
+    right:12vw;
+    rotate: 45deg;
+    fill:rgba(8, 0, 251, 0.05);
+    scale: 3;
+}
+.square-3{
+    position: relative;
+    top:-28vh;
+    right:-8vw;
+    rotate: 24.11deg;
+    fill:rgba(8, 0, 251, 0.05);
+    scale: 5;
+}
+.square-4{
+    position: relative;
+    top:-12vh;
+    right:-26vw;
+    rotate: 74.11deg;
+    fill:rgba(8, 0, 251, 0.05);
+    scale: 4;
+}
+.square-5{
+    position: relative;
+    top:-37vh;
+    right:-26vw;
+    rotate: 74.11deg;
+    fill:rgba(8, 0, 251, 0.05);
+    scale: 4;
+}
+.content-about{
+    font-family: 'sans sherif';
+    font-size: 1.2rem;
+    width:60vw;
+    margin-top: 5vh;
+}
+.underline{
+    width: 59vw;
+}
+.background{
+    position: absolute;
+    opacity: 0.5;
+    right: 22vw;
+}
+.photo{
+  background-image: linear-gradient(rgba(128, 128, 128, 0.603),0%,rgb(255, 255, 255));
+  position: relative;
+  z-index: 1000;
+  width: 100vw;
+  height:80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.slideshow{
+margin-top: 5vh;
+height:40vh;
+width: 41vw;
+}
+.carousel-inner img{
+width: 40vw !important;
+}
